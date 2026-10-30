@@ -1,9 +1,9 @@
 /**
  * Your projects. Replace the descriptions with what YOU actually built.
  *
- * image:  put screenshots in /public/projects/ and reference them as
- *         '/projects/shop.webp' (16:10 ratio looks best). Leave '' to use
- *         the built-in abstract cover.
+ * image:  put screenshots in public/projects/ and reference them as
+ *         'projects/shop.webp' (no leading slash, so it also works on
+ *         GitHub Pages; 16:10 looks best). Leave '' for the abstract cover.
  * github / live: leave '' to hide that button — no dead links.
  *   live can point to a page in public/demos/ (e.g. 'demos/LandingPage/').
  * liveLabel: optional text for the card's live link.
@@ -29,7 +29,7 @@ export const projects = [
       'Added pricing tiers, testimonials and a footer, all responsive from mobile to desktop',
     ],
     tech: ['HTML5', 'CSS3', 'JavaScript'],
-    image: '',
+    image: 'projects/landing.webp',
     github: 'https://github.com/manideepmanne111-jpg/OIBSIP/tree/master/WebDev-L1-LandingPage',
     live: 'demos/LandingPage/',
     accent: 'teal',
@@ -52,7 +52,7 @@ export const projects = [
       'Warned users when a value falls below absolute zero (−273.15 °C / 0 K)',
     ],
     tech: ['HTML5', 'CSS3', 'JavaScript'],
-    image: '',
+    image: 'projects/temperature.webp',
     github: 'https://github.com/manideepmanne111-jpg/OIBSIP/tree/master/WebDev-L1-TemperatureConverter',
     live: 'demos/TemperatureConverter/',
     accent: 'gold',
@@ -75,7 +75,7 @@ export const projects = [
       'Made the layout responsive for mobile, tablet and desktop',
     ],
     tech: ['HTML5', 'CSS3', 'JavaScript'],
-    image: '',
+    image: 'projects/portfolio.webp',
     github: 'https://github.com/manideepmanne111-jpg/OIBSIP/tree/master/WebDev-L1-Portfolio',
     live: 'demos/Portfolio/',
     accent: 'teal',
@@ -99,7 +99,7 @@ export const projects = [
       'Evaluated model performance using R-squared and MAE metrics',
     ],
     tech: ['Python', 'Pandas', 'Machine Learning', 'Jupyter Notebook'],
-    image: '',
+    image: 'projects/flood.webp',
     github: 'https://github.com/manideepmanne111-jpg/Flood-Prediction-Using-Mchine-Learning',
     live: 'demos/FloodPrediction/',
     liveLabel: 'View model output',
@@ -124,7 +124,7 @@ export const projects = [
       'Analyzed tourist feedback to identify customer-satisfaction trends',
     ],
     tech: ['Python', 'NLTK', 'TF-IDF', 'Naive Bayes', 'SVM'],
-    image: '',
+    image: 'projects/sentiment.webp',
     github: 'https://github.com/manideepmanne111-jpg/Tourist-Places-Reviews-Sentiment-Classification-Using-Machinelearning-Techniques',
     live: 'demos/SentimentOutput/',
     liveLabel: 'View classification output',
