@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precision Temperature Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="converter-card">
+      <div class="card-header">
+        <div class="header-icon">🌡️</div>
+        <h1>ThermoFlux</h1>
+        <p>Real-time Temperature Unit Converter</p>
+      </div>
+
+      <form id="converter-form" onsubmit="return false;">
+        <div class="input-group">
+          <label for="temp-input">Enter Temperature Value</label>
+          <div class="input-wrapper">
+            <input type="text" id="temp-input" placeholder="e.g. 25" autocomplete="off" autofocus>
+            <select id="unit-select">
+              <option value="celsius">°C (Celsius)</option>
+              <option value="fahrenheit">°F (Fahrenheit)</option>
+              <option value="kelvin">K (Kelvin)</option>
+            </select>
+          </div>
+          <div class="error-msg" id="error-msg"></div>
+        </div>
+
+        <button type="button" class="btn-convert" id="convert-btn">Convert Temperature →</button>
+      </form>
+
+      <!-- Output Results Section -->
+      <div class="results-grid" id="results-grid">
+        <div class="result-card" id="res-celsius">
+          <span class="result-label">Celsius</span>
+          <span class="result-value" id="val-celsius">-- °C</span>
+        </div>
+
+        <div class="result-card" id="res-fahrenheit">
+          <span class="result-label">Fahrenheit</span>
+          <span class="result-value" id="val-fahrenheit">-- °F</span>
+        </div>
+
+        <div class="result-card" id="res-kelvin">
+          <span class="result-label">Kelvin</span>
+          <span class="result-value" id="val-kelvin">-- K</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

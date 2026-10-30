@@ -96,8 +96,8 @@ export default function ProjectModal({ project, onClose }) {
             {(project.live || project.github) && (
               <div className="modal__actions">
                 {project.live && (
-                  <Button href={project.live} icon={ExternalLink}>
-                    Live demo
+                  <Button href={project.live} icon={ExternalLink} external>
+                    {project.liveLabel || 'Live demo'}
                   </Button>
                 )}
                 {project.github && (

@@ -5,6 +5,8 @@
  *         '/projects/shop.webp' (16:10 ratio looks best). Leave '' to use
  *         the built-in abstract cover.
  * github / live: leave '' to hide that button — no dead links.
+ *   live can point to a page in public/demos/ (e.g. 'demos/LandingPage/').
+ * liveLabel: optional text for the card's live link.
  * category: used by the filter bar.
  */
 export const projects = [
@@ -29,7 +31,7 @@ export const projects = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     image: '',
     github: 'https://github.com/manideepmanne111-jpg/OIBSIP/tree/master/WebDev-L1-LandingPage',
-    live: '',
+    live: 'demos/LandingPage/',
     accent: 'teal',
   },
   {
@@ -52,7 +54,7 @@ export const projects = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     image: '',
     github: 'https://github.com/manideepmanne111-jpg/OIBSIP/tree/master/WebDev-L1-TemperatureConverter',
-    live: '',
+    live: 'demos/TemperatureConverter/',
     accent: 'gold',
   },
   {
@@ -75,7 +77,7 @@ export const projects = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     image: '',
     github: 'https://github.com/manideepmanne111-jpg/OIBSIP/tree/master/WebDev-L1-Portfolio',
-    live: '',
+    live: 'demos/Portfolio/',
     accent: 'teal',
   },
   {
@@ -99,7 +101,8 @@ export const projects = [
     tech: ['Python', 'Pandas', 'Machine Learning', 'Jupyter Notebook'],
     image: '',
     github: 'https://github.com/manideepmanne111-jpg/Flood-Prediction-Using-Mchine-Learning',
-    live: '',
+    live: 'demos/FloodPrediction/',
+    liveLabel: 'View model output',
     accent: 'teal',
   },
   {
@@ -123,7 +126,8 @@ export const projects = [
     tech: ['Python', 'NLTK', 'TF-IDF', 'Naive Bayes', 'SVM'],
     image: '',
     github: 'https://github.com/manideepmanne111-jpg/Tourist-Places-Reviews-Sentiment-Classification-Using-Machinelearning-Techniques',
-    live: '',
+    live: 'demos/SentimentOutput/',
+    liveLabel: 'View classification output',
     accent: 'gold',
   },
 ];

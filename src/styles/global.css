@@ -1258,3 +1258,19 @@ h1, h2, h3 { font-weight: 700; }
 }
 .hero__copy .status { padding: 8px 18px 8px 14px; gap: 12px; color: var(--c-text); }
 .hero__copy .hero__role { font-weight: 600; color: var(--c-teal); }
+
+/* Project card footer: live link text + a Details button above the card link */
+.project-card__foot {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--s-3);
+  margin-top: auto; padding-top: var(--s-4);
+}
+.project-card__foot .project-card__cta { margin-top: 0; padding-top: 0; }
+.project-card__details {
+  position: relative; z-index: 3;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--c-line); border-radius: var(--r-pill);
+  font-size: 0.8125rem; font-weight: 500; color: var(--c-text-2);
+  transition: color var(--dur), border-color var(--dur), background var(--dur);
+}
+.project-card__details:hover { color: var(--c-text); border-color: var(--c-teal); background: var(--c-teal-dim); }

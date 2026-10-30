@@ -1,16 +1,32 @@
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Info } from 'lucide-react';
 import ProjectCover from './ProjectCover.jsx';
 
+/**
+ * Clicking the card opens the live project (or its output) in a new tab.
+ * Projects without a live link open the case study instead.
+ */
 export default function ProjectCard({ project, index, onOpen }) {
+  const hasLive = Boolean(project.live);
+
   return (
     <article className="project-card">
-      <button
-        type="button"
-        className="project-card__hit"
-        onClick={() => onOpen(project)}
-        aria-haspopup="dialog"
-        aria-label={`Open case study: ${project.title}`}
-      />
+      {hasLive ? (
+        <a
+          href={project.live}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="project-card__hit"
+          aria-label={`Open live project: ${project.title} (opens in a new tab)`}
+        />
+      ) : (
+        <button
+          type="button"
+          className="project-card__hit"
+          onClick={() => onOpen(project)}
+          aria-haspopup="dialog"
+          aria-label={`Open case study: ${project.title}`}
+        />
+      )}
       <div className="project-card__media">
         <ProjectCover project={project} priority={index === 0} />
       </div>
@@ -35,9 +51,22 @@ export default function ProjectCard({ project, index, onOpen }) {
             </li>
           ))}
         </ul>
-        <span className="project-card__cta" aria-hidden="true">
-          View case study <ArrowUpRight size={16} />
-        </span>
+        <div className="project-card__foot">
+          <span className="project-card__cta" aria-hidden="true">
+            {hasLive ? project.liveLabel || 'View live project' : 'View case study'} <ArrowUpRight size={16} />
+          </span>
+          {hasLive && (
+            <button
+              type="button"
+              className="project-card__details"
+              onClick={() => onOpen(project)}
+              aria-haspopup="dialog"
+              aria-label={`Project details: ${project.title}`}
+            >
+              <Info size={15} aria-hidden="true" /> Details
+            </button>
+          )}
+        </div>
       </div>
     </article>
   );
